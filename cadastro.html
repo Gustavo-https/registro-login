@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="formulario">
+            <input type="text" id="login" placeholder="Uusario" required>
+            <input type="text" id="senha" placeholder="Senha" required>
+            <button id="btnCadastrar">Cadastrar</button>
+        </div>
+        <div class="tabela_usuarios">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Uusario</th>
+                        <th>Senha</th>
+                        <th>Operação</th>
+                    </tr>
+                </thead>
+                <tbody id="listar_usuarios"></tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="JS/cadastro.js"></script>
+</body>
+
+</html>

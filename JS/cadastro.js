@@ -14,3 +14,23 @@ botao.addEventListener('click' , function (){
     localStorage.setItem("usuarios", listaJson);
 
 });
+
+function listar(){
+    const usuariosCadastrados = JSON.parse(localStorage.getItem("usuarios")) || [];
+    let tabela = document.getElementById('listar_usuarios');
+    tabela.innerHTML - '';
+    usuariosCadastrados.forEach((usuario, index) => {
+        let linha = document.createElement('tr');
+        linha.innerHTML = `
+            <td>${usuario.usuario}</td>
+            <td>${usuario.senha}</td>
+            <td>
+                <button onclick="excluirUsuario(${index})" >Excluir</button>
+                <button onclick="editarUsuario(${index})" >Editar</button>
+            </td>
+        `;
+        tabela.appendChild(linha);
+    });
+}
+
+listar();
